@@ -12,19 +12,30 @@
 
 // Add question and answer to questions array
 
-//create a question array and push the generated question into the array
-$questions = [];
-$rangeLow = 1;
-$rangeHigh = 1000;
-$incorrectNumberLow = 1;
-$incorrectNumberHigh = 10;
 
-for($i=0;i<=20;++$i){
+
+//create a question array and push the generated question into the array
+function generateQuestion(){
+    $rangeLow = 1;
+    $rangeHigh = 100;
+    $incorrectNumberLow = 1;
+    $incorrectNumberHigh = 10;
+
     $leftAdder = random_int($rangeLow, $rangeHigh);
     $rightAdder = random_int($rangeLow, $rangeHigh);
     $correctAnswer = $leftAdder + $rightAdder;
-    $incorrectAnswerFirst = random_int($incorrectNumberLow, $incorrectNumberHigh);
-    $incorrectAnswerSecond = random_int($incorrectAnswerFirst, $incorrectNumberHigh);
+    $incorrectAnswerFirst = $correctAnswer + random_int($incorrectNumberLow, $incorrectNumberHigh);
+    $incorrectAnswerSecond = $correctAnswer - random_int($incorrectNumberLow , $incorrectNumberHigh);
+    $questions =
+        [
+            "leftAdder" => $leftAdder,
+            "rightAdder" => $rightAdder,
+            "correctAnswer" => $correctAnswer,
+            "firstIncorrectAnswer" => $incorrectAnswerFirst,
+            "secondIncorrectAnswer" => $incorrectAnswerSecond
+        ];
 
-   
+
+    return $questions;
 }
+

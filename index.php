@@ -1,3 +1,7 @@
+<?php 
+    include("inc/quiz.php");
+    $shuffledAnswers = shuffle_answers($answers);//shuffle the answers so make it random
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +15,12 @@
     <div class="container">
         <div id="quiz-box">
             <p class="breadcrumbs">Question # of #</p>
-            <p class="quiz">What is 54 + 71?</p>
-            <form action="inc/quiz.php" method="post">
+            <p class="quiz">What is <?php echo $questions["leftAdder"]?> + <?php echo $questions["rightAdder"]?>?</p>
+            <form action="index.php" method="post">
                 <input type="hidden" name="id" value="0" />
-                <input type="submit" class="btn" name="answer" value="135" />
-                <input type="submit" class="btn" name="answer" value="125" />
-                <input type="submit" class="btn" name="answer" value="115" />
+                <input type="submit" class="btn" name="answer" value=<?php echo $shuffledAnswers[0]?> />
+                <input type="submit" class="btn" name="answer" value=<?php echo $shuffledAnswers[1]?> />
+                <input type="submit" class="btn" name="answer" value=<?php echo $shuffledAnswers[2]?> />
             </form>
         </div>
     </div>
