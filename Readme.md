@@ -2,7 +2,7 @@
 
 **A_PHP_Quiz_App** 
 
-A quiz app written in php7. This app used PHP session to store, track and update the questions and answers. User can play, view total score, and play again if they want to.
+A quiz app written in php7. This app used PHP session to store, track and update the questions and answers. User can play, view total score, and play again if they want to!
 
 ## Screenshots
 
