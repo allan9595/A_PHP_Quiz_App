@@ -1,7 +1,8 @@
-/* Random Quote Generator Styles */
 
 body {
   font-family: 'Playfair Display', serif;
+  background: #166966;
+  color: white;
 }
 
 #quiz-box {
@@ -52,9 +53,9 @@ body {
   display: inline-block;
   bottom: 150px;
   border-radius: 4px;
-  border: 2px solid #000;
+  border: 2px solid #ed5f5a;
   color: #fff;
-  background-color: #000;
+  background-color: #ed5f5a;
   padding: 15px;
   margin: 10px;
   transition: .5s ;
@@ -67,4 +68,8 @@ body {
 
 .btn:focus {
   outline: none;
+}
+
+.animated, .total{
+  font-size:50px;
 }
